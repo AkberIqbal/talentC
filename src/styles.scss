@@ -1,0 +1,40 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+$heightPB: 60px;
+$progressAreaFillColor : lightblue;
+
+
+div {
+  font: 100% $font-stack;
+  color: $primary-color;
+ button{
+     margin: 0 5px;
+ }   
+}
+
+.container{
+    margin: auto;
+    max-width: 400px;
+    .progressBar{ 
+        margin:5% 0; 
+        height:$heightPB; 
+        border:1px solid black; 
+        width:100%;
+
+        span{
+            position: absolute;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+            padding-top:20px;
+        }
+    
+    .progressArea{
+        background: $progressAreaFillColor;
+        height: 100%;
+        transition: width 1s ease-in-out; 
+    }
+    .redClass{ background-color: red;         transition: background-color 1s ease-in-out; 
+    }
+    }
+}
