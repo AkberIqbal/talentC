@@ -10,7 +10,7 @@ to minify, uglify etc. need to run 'grunt' only
 
 FINAL RESULT
 ==============
-finals files will be placed in the /dist folder
+final files will be placed in the /dist folder
 
 Thanks
 Akber Iqbal
