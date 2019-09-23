@@ -3,9 +3,9 @@ div button { margin: 0 5px; padding: 5px 10px; }
 div select { padding: 5px; }
 
 .container { margin: auto; max-width: 400px; }
-.container .progressBar { margin: 5% 0; height: 60px; border: 1px solid black; width: 100%; }
+.container .progressBar { margin: 5% 0; height: 60px; border: 1px solid gray; width: 100%; }
 .container .progressBar span { position: absolute; width: 80%; max-width: 400px; text-align: center; padding-top: 20px; }
-.container .progressBar .progressArea { background: lightblue; height: 100%; transition: width 1s ease-in-out; }
-.container .progressBar .redClass { background-color: red; transition: background-color 1s ease-in-out; }
+.container .progressBar .progressArea { background: lightblue; height: 100%; transition: width 1s ease-in-out; -webkit-transition: width 1s ease-in-out; }
+.container .progressBar .redClass { background-color: red; transition: background-color 1s ease-in-out; -webkit-transition: background-color 1s ease-in-out; }
 
 /*# sourceMappingURL=styles.css.map */
