@@ -62,7 +62,7 @@ function btnClick(btnID, btnValue, maxLimit) {
 }
 
 
-loadXMLDoc("http://pb-api.herokuapp.com/bars", function (err, data) {
+loadXMLDoc("https://pb-api.herokuapp.com/bars", function (err, data) {
     if (err) {
         console.log('error from API:', err);
         document.getElementById('errorArea').setAttribute("style",'display:initial');

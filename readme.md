@@ -1,7 +1,7 @@
 CODE
 ======
-index.html is the file in the root
-Gruntfile.js
+index.html, Gruntfile.js are in the root
+
 required scss, js, css files are in the src folder
 
 TO PREPARE
