@@ -63,7 +63,11 @@ function btnClick(btnID, btnValue, maxLimit) {
 
 
 loadXMLDoc("http://pb-api.herokuapp.com/bars", function (err, data) {
-    if (err) { console.log('error from API:', err); }
+    if (err) {
+        console.log('error from API:', err);
+        document.getElementById('errorArea').setAttribute("style",'display:initial');
+        document.getElementById('errorArea').innerHTML = "Something went wrong :( "+"<br />"+" status:[" + err.status + "] "+"<br/>"+"description: [" + err.statusText + "]";
+    }
     else {
         console.log("data from API:", data);
         var myObj = JSON.parse(data);
@@ -74,8 +78,12 @@ loadXMLDoc("http://pb-api.herokuapp.com/bars", function (err, data) {
             var btn = document.createElement("BUTTON");
             var setID = i + 1;
             setID = "bar" + setID;
+            btn.setAttribute("type", 'button');
             btn.setAttribute("id", setID);
             btn.setAttribute("value", myObj.buttons[i]);
+            btn.setAttribute("role", "button");
+            btn.setAttribute("tabindex", i);
+
             btn.setAttribute("onclick", "btnClick('" + setID + "', '" + myObj.buttons[i] + "', " + myObj.limit + ")");
             btn.innerHTML = myObj.buttons[i];
             document.getElementById("progressButtonsArea").appendChild(btn);
